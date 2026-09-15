@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "Running flake8..."
+
+if command -v py >/dev/null 2>&1; then
+    py -m flake8 .
+else
+    python -m flake8 .
+fi
+
+if [ $? -ne 0 ]; then
+    echo "flake8 found errors. Commit cancelled."
+    exit 1
+fi
+
+echo "flake8 passed."
+exit 0
