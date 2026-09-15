@@ -17,3 +17,14 @@
 
 - №4 — настроен Git hook `pre-commit`, который автоматически запускает `flake8` перед коммитом.
 - №10 — реализован Git flow с ветками `main`, `develop` и `feature-flow-demo`.
+
+## Git hook
+
+Файл хука находится в:
+
+`hooks/pre-commit`
+
+Для использования хука настроен путь:
+
+```bash
+git config core.hooksPath hooks
